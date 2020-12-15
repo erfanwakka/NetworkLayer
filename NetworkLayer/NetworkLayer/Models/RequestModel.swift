@@ -7,6 +7,8 @@
 
 import Foundation
 
+class EmptyBody: Encodable {}
+
 enum HTTPRequestMethod: String {
     case get = "GET"
     case post = "POST"
@@ -39,11 +41,10 @@ extension Request {
     }
     
     func urlRequest() -> URLRequest {
+        
         let url = URL(string: Constants.endPoint)!
         
-        var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
-        
-        
+        var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)!
         
         var queryItems: [URLQueryItem] = []
         for (key, value) in parameters {
@@ -54,13 +55,13 @@ extension Request {
         }
         urlComponents.queryItems = queryItems
         
-        request.url = url
+        var request = URLRequest(url: urlComponents.url!)
         request.httpMethod = method.rawValue
         
         for (key, value) in headers {
-            
             request.addValue(key, forHTTPHeaderField: value)
         }
+        
+        return request
     }
 }
-class EmptyBody: Encodable {}
