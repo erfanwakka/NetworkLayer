@@ -7,11 +7,11 @@
 
 import Foundation
 
-
-//class ResponseModel<T: Decodable> {
-//    
-//    var isSuccess: Bool = false
-//    var data: T?
-//    var message: String
-//    var error: ErrorModel =
-//}
+class ResponseModel<T: Decodable> {
+    
+    var isSuccess: Bool = false
+    var data: T?
+    var message: String = ""
+    var error: Errors?
+    
+}

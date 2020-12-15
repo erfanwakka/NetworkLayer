@@ -8,12 +8,15 @@
 import Foundation
 
 enum Errors: Error, LocalizedError {
-    case badRequest
+    case badRequest(message: String = "")
+    case forbidden(message: String = "")
+    case error(message: String = "")
     case serverError
     case unAuthorized
-    case forbidden
     case unavailable
-}
-class ErrorModel: Error {
-    var localizedDescription: String = ""
+    
+    func handleError() {
+        //TODO: - depend on error show some alerts -
+    }
+    func 
 }
