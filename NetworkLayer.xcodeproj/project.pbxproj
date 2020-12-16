@@ -16,8 +16,9 @@
 		B3CD4A8125874C3C00BE88A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CD4A7F25874C3C00BE88A4 /* LaunchScreen.storyboard */; };
 		B3CD4A922587548E00BE88A4 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD4A912587548E00BE88A4 /* RequestModel.swift */; };
 		B3CD4A95258754B200BE88A4 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD4A94258754B200BE88A4 /* ResponseModel.swift */; };
-		B3CD4B022587957000BE88A4 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD4B012587957000BE88A4 /* ErrorModel.swift */; };
+		B3CD4B022587957000BE88A4 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD4B012587957000BE88A4 /* Errors.swift */; };
 		B3CD4B0625879AB300BE88A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD4B0525879AB300BE88A4 /* Constants.swift */; };
+		B3EA7BF2258A3ADC0021ED27 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EA7BF1258A3ADC0021ED27 /* ErrorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +33,9 @@
 		B3CD4A8225874C3C00BE88A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3CD4A912587548E00BE88A4 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		B3CD4A94258754B200BE88A4 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
-		B3CD4B012587957000BE88A4 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		B3CD4B012587957000BE88A4 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		B3CD4B0525879AB300BE88A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B3EA7BF1258A3ADC0021ED27 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,13 +49,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B32172722588C22F0098510A /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetworkManager;
-			sourceTree = "<group>";
-		};
 		B3CD4A6825874C3B00BE88A4 = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				B32172732588C2400098510A /* NetworkManager.swift */,
-				B32172722588C22F0098510A /* NetworkManager */,
 				B3CD4A902587548200BE88A4 /* Models */,
 			);
 			path = NetworkLayer;
@@ -126,6 +120,7 @@
 				B3CD4B002587956500BE88A4 /* Errors */,
 				B3CD4A912587548E00BE88A4 /* RequestModel.swift */,
 				B3CD4A94258754B200BE88A4 /* ResponseModel.swift */,
+				B3EA7BF1258A3ADC0021ED27 /* ErrorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,7 +128,7 @@
 		B3CD4B002587956500BE88A4 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				B3CD4B012587957000BE88A4 /* ErrorModel.swift */,
+				B3CD4B012587957000BE88A4 /* Errors.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -216,12 +211,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3CD4B022587957000BE88A4 /* ErrorModel.swift in Sources */,
+				B3CD4B022587957000BE88A4 /* Errors.swift in Sources */,
 				B3CD4A7925874C3B00BE88A4 /* ViewController.swift in Sources */,
 				B3CD4A7525874C3B00BE88A4 /* AppDelegate.swift in Sources */,
 				B3CD4A7725874C3B00BE88A4 /* SceneDelegate.swift in Sources */,
 				B3CD4B0625879AB300BE88A4 /* Constants.swift in Sources */,
 				B32172742588C2400098510A /* NetworkManager.swift in Sources */,
+				B3EA7BF2258A3ADC0021ED27 /* ErrorModel.swift in Sources */,
 				B3CD4A95258754B200BE88A4 /* ResponseModel.swift in Sources */,
 				B3CD4A922587548E00BE88A4 /* RequestModel.swift in Sources */,
 			);
