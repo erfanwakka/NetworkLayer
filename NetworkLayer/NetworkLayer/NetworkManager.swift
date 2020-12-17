@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 class NetworkManager {
     
     private init() {}
@@ -18,22 +17,24 @@ class NetworkManager {
                 completion(.failure(.error(error.localizedDescription)))
             }
             if let response = response as? HTTPURLResponse {
-                if response.statusCode != 200 {
+                if response.statusCode != HTTPStatusCodes.success.rawValue {
                     switch response.statusCode {
-                    case 400:
+                    case HTTPStatusCodes.badRequest.rawValue:
                         completion(.failure(.badRequest(data)))
-                    case 401:
+                    case HTTPStatusCodes.unAvailable.rawValue:
                         completion(.failure(.unAuthorized(data)))
-                    case 403:
+                    case HTTPStatusCodes.forbidden.rawValue:
                         completion(.failure(.forbidden(data)))
-                    case 503:
+                    case HTTPStatusCodes.unAvailable.rawValue:
                         completion(.failure(.unAvailable(data)))
-                    case 500:
+                    case HTTPStatusCodes.serverError.rawValue:
                         completion(.failure(.serverError(data)))
                     default:
-                        break
+                        completion(.failure(.error("Error with status code: \(response.statusCode)")))
                     }
                 }
+            } else {
+                completion(.failure(Errors.error("No response provided!")))
             }
             if let data = data {
                 do {
@@ -43,8 +44,8 @@ class NetworkManager {
                     completion(.failure(Errors.error(error.localizedDescription)))
                 }
             } else {
-                completion(.failure(Errors.error("No data Provided")))
+                completion(.failure(Errors.error("No data provided")))
             }
-        }
+        }.resume()
     }
 }

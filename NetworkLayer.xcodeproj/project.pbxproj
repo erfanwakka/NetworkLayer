@@ -73,10 +73,8 @@
 				B3CD4A8E2587546200BE88A4 /* Others */,
 				B3CD4A8D2587544000BE88A4 /* Configs */,
 				B3CD4A8A2587543500BE88A4 /* Assets */,
-				B3CD4A7425874C3B00BE88A4 /* AppDelegate.swift */,
-				B3CD4A7625874C3B00BE88A4 /* SceneDelegate.swift */,
+				B3CD4A7A25874C3B00BE88A4 /* Main.storyboard */,
 				B3CD4A7825874C3B00BE88A4 /* ViewController.swift */,
-				B3CD4A7F25874C3C00BE88A4 /* LaunchScreen.storyboard */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -100,7 +98,9 @@
 		B3CD4A8E2587546200BE88A4 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				B3CD4A7A25874C3B00BE88A4 /* Main.storyboard */,
+				B3CD4A7625874C3B00BE88A4 /* SceneDelegate.swift */,
+				B3CD4A7F25874C3C00BE88A4 /* LaunchScreen.storyboard */,
+				B3CD4A7425874C3B00BE88A4 /* AppDelegate.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
